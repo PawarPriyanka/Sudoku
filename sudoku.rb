@@ -1,4 +1,5 @@
 class Sudoku
+
   def create_puzzle
     sudoku = Array.new(9){ Array.new(9,0) }
     81.times do
@@ -92,8 +93,6 @@ class Player
     save_entries.store(row, col)
   end
 
-
-
   def play_sudoku
     s = Sudoku.new
     puzzle = s.create_puzzle
@@ -131,5 +130,5 @@ class Player
   end
 end
 
-u = User.new
+u = Player.new
 u.play_sudoku
